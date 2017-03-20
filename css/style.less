@@ -1,0 +1,260 @@
+/*import all css files **/
+@import "../bootstrap/css/bootstrap.min.css";
+@import "../bootstrap/css/bootstrap-theme.min.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Exo:100, 300";
+@import "reset.css";
+
+
+
+/*variables*/
+
+@MainColor:#292929;
+@seconderyColor: #f2766e;
+@textColor:#8e8e8e;
+@mainFont: 'Exo', sans-serif;
+@images: "../images/";
+@iconColor: #8186a3;
+
+
+body{
+    font-family: @mainFont;
+    color: @MainColor;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    color: #ffffff;
+    background-color: @seconderyColor;
+    border: none;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+.btn-primary:hover{
+    background-color: @seconderyColor;
+    animation-name: BtnWhiter;
+    animation-duration: 1s;
+}
+
+
+@keyframes PlayWhiter {
+    0%   {color: @iconColor;}
+    33%  {color: @iconColor*1.2;}
+    100% {color: @iconColor;}
+}
+
+@keyframes BtnWhiter {
+    0%   {background-color: @seconderyColor;}
+    25%  {background-color: @seconderyColor*1.2;}
+    75%  {background-color: @seconderyColor*1.2;}
+    100% {background-color: @seconderyColor;}
+}
+
+.material-icons{
+    font-size:70px;
+    color: @iconColor;
+    cursor: pointer;
+    padding: 30px 0;
+}
+
+.material-icons:hover{
+    animation-name: PlayWhiter;
+    animation-duration: 1s;
+}
+
+.paragraph{
+    color: @textColor;
+    line-height: 160%;
+    padding: 21px 0 0 0;
+}
+
+h3{
+    color: @seconderyColor;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p{
+    .paragraph;
+}
+h1{
+    font-size: 33px;   
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+h1 span{
+    color: @seconderyColor;
+}
+#page1 {
+    background: #fff url("@{images}background.jpg") no-repeat center center fixed;
+    text-align: center;
+    background-size: 1900px; 
+}
+
+#page1  h1{
+    font-weight:300;
+    font-size: 55px;
+    margin-top: 115px;
+    line-height: 65px;
+}
+
+#page2 .row{
+    margin: 18% 0% 0% 0%;
+}
+
+#page2{
+    background: url("@{images}background-2.jpg") no-repeat right top #fff;
+}
+
+#page3{
+    text-align: center;
+    background-image: url("@{images}pencils.png"), url("@{images}earphones.png"), url("@{images}coffe.png");
+    background-position: left 120px, right 120px, right bottom;
+    background-attachment:fixed, fixed, fixed;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: #f6f5f3;
+    opacity: 0.9;
+    background-size: 15.2%, 11.2%, 12.4%;
+}
+
+#page3 .row{
+    margin: 13% 0% 0% 0%;
+}
+
+#page3 ul{
+    padding-top: 30px;
+}
+
+
+#page3 ul li{
+    padding: 80px 0;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+#page3 ul li:nth-child(1){
+    background-image:  url("@{images}images.png");
+}
+
+#page3 ul li:nth-child(2){
+    background-image:  url("@{images}airplane.png");
+}
+
+#page3 ul li:nth-child(3){
+    background-image:  url("@{images}bulb.png");
+}
+
+#page4{
+    position: relative;
+}
+
+#page4 .container{
+    position: relative;
+    z-index: 2;
+}
+
+#page4 .row{
+    margin: 100px 0% 0% 0%;
+}
+
+#page4 h3{
+    padding-top: 80px;
+}
+#page4 .triangle {
+    position: absolute;
+    bottom: 0px;
+    left: -143px;
+    z-index: 1;
+}
+
+#page4 .mac{
+    background: url("@{images}mac.png") no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    min-height: 305px;
+}
+
+
+#page5{
+    background-color: #323a6b;
+    color: #fff;
+    text-align: center;
+}
+
+#page5 .row{
+    margin: 13% 0% 0% 0%;
+}
+
+#page5 .form-inline .form-control{
+    background-color: #454c7a;
+    border: 1px solid #969cb2;
+    width: 100%;
+}
+
+#page5 .btn-primary{
+    width: 100%;
+}
+
+#page5 .CTA{
+    background: url("@{images}arrow.jpg") no-repeat left center;
+    padding-bottom: 27px;
+    margin-top: 13px;
+}
+
+.form-group{
+        margin-bottom: 15px !important;
+}
+
+  @media screen and (max-width: 1200px) {
+       #page4 .triangle {
+        display: none;
+    }
+      #page4 .mac{
+        padding-bottom: 12%;
+        background-size: 60%;
+    }
+      
+      #page4 .row{
+        margin: 4% 0% 5% 0% !important;
+      }
+      h1{
+        font-size: 26px;
+        line-height: 33px;
+    }
+      #page1 h1 {
+      font-size: 45px;
+      line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+     
+
+    
+
+    #page2 {
+        background: #fff;
+        min-height: 490px !important;
+    }
+
+        #page2 .row {
+        margin: 8% 0% 0% 0%;
+    }
+        #page4 .row {
+        margin: 40px 0% 0% 0%;
+    }
+
+    #page4 h3{
+        padding-top: 0;
+    }
+    
+}
